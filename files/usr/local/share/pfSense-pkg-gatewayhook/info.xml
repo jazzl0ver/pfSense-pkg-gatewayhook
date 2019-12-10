@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<pfsensepkgs>
+	<package>
+		<name>gatewayhook</name>
+		<pkginfolink>https://github.com/jazzl0ver/pfSense-pkg-gatewayhook</pkginfolink>
+		<descr><![CDATA[Gateway up/down hook. Runs /usr/local/etc/rc.d/rc.gateway_alarm_custom upon gateway up/down event]]></descr>
+		<version>%%PKGVERSION%%</version>
+		<configurationfile>gatewayhook.xml</configurationfile>
+	</package>
+</pfsensepkgs>
