@@ -8,6 +8,7 @@ Gateway up/down hook. Runs /usr/local/etc/rc.d/rc.gateway_alarm_custom upon gate
 pkg install pfSense-pkg-gatewayhook-0_1.txz
 ```
 3. Edit /usr/local/etc/rc.d/rc.gateway_alarm_custom upon your needs
+4. Your gateway(s) should be in a gateway group (System/Routing/Gateway Groups)
 
 # Building
 In case you want to build this package manually, do:
