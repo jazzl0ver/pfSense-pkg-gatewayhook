@@ -27,6 +27,8 @@ function gatewayhook_install() {
     if (!file_exists(GATEWAY_ALARM_CUSTOM_SCRIPT)) {
 	file_put_contents(GATEWAY_ALARM_CUSTOM_SCRIPT, 
 	    '#!/bin/sh' . "\n\n" .
+	    '# don''t run the hook script on CARP slave' . "\n\n" .
+	    'ifconfig | grep 'carp: ' | grep -q MASTER || exit 0' . "\n\n" .
 	    '# put what needs to be done before exit line' . "\n\n" .
 	    'exit 0' . "\n"
 	);
