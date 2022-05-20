@@ -42,7 +42,7 @@ function gatewayhook_plugin_gateway($pluginparams) {
     $interface = $pluginparams['interface'];
     $gatewayhooklock = lock("gatewayhook", LOCK_EX);
     syslog(LOG_NOTICE, "gatewayhook: " . GATEWAY_ALARM_CUSTOM_SCRIPT . " script started");
-    mwexec(GATEWAY_ALARM_CUSTOM_SCRIPT);
+    mwexec("type={$type} event={$event} interface={$interface} " . GATEWAY_ALARM_CUSTOM_SCRIPT);
     unlock($gatewayhooklock);
     return 0;
 }
